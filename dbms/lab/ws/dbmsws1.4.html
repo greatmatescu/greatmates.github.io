@@ -169,45 +169,95 @@
           <div class="title"><h1>Welcome to GREAT MATES</h1></div>
           <div class="content">
             <pre>
-1.3 Create table EMP with the following description :
-Name Type
-EMPNO NOT NULL NUMBER(4)
-ENAME VARCHAR2(10)
-JOB VARCHAR2(9)
-MGR NUMBER(4)
-HIREDATE DATE
-SAL NUMBER(7,2)
-COMM NUMBER(7,2)
-DEPTNO NUMBER(3)
-AGE NUMBER(3)
-ESAL NUMBER
-a. Get the description EMP table.
-b. List all employees details.
-c. List all employee names and their salaries, whose salary lies between 1500/- and 3500/- both inclusive.
-d.   List all employee names and their and their manager whose manager is 7902 or 7566 0r 7789.
-e.  List all employees who belongs to the department 10 or 20.
+                Question 1
+                
+                Write a program in PL/SQL to print the prime numbers between 1 to 100.
+                
+                Your Answer
 
 
-Program code :
-create table EMP(
-EMPNO NUMBER(4) NOT NULL, ENAME VARCHAR(10),
-JOB VARCHAR(9), MGR NUMBER(4), HIREDATE DATE, SAL NUMBER(7,2),
-COMM NUMBER(7,2), DEPTNO NUMBER(3), AGE NUMBER(3), ESAL NUMBER
-);
- 
-desc EMP;
- 
-insert into EMP values(2173, 'ashu', 'developer' , 7902, '14/feb/2018' ,1560.50, 26.87, 20 ,24, 2000 );
-insert into EMP values(2221, 'arpit', 'manager' , 7902, '12/oct/2016' ,2290.50, 66.34, 10 ,23, 3000 );
-insert into EMP values(2803, 'sameer', 'salesman' , 7578, '16/jan/2015' ,3250, 100, 20 ,24, 3500 );
-insert into EMP values(1014, 'ravi', 'designer' , 7566, '25/dec/2017' ,4000, 112.53, 25 ,20, 4000 );
-insert into EMP values(1015, 'surbhi', 'analyst' , 7789, '29/aug/2019' ,3500, 76.89, 10 ,20, 3500 );
- 
-select * from EMP;
- 
-select ENAME,SAL from EMP where SAL>=1500 and SAL<=3500 ; select ENAME,MGR from EMP where MGR in(7902,7566,7789) ; select * from EMP where DEPTNO in(10,20);
+                DECLARE
+                
+                  i NUMBER(3);
+                
+                  j NUMBER(3);
+                
+                BEGIN
+                
+                dbms_output.Put_line('The prime numbers are:');
+                
+                dbms_output.new_line;
+                
+                  i := 2;
+                
+                  LOOP
+                
+                    j := 2;
+                
+                    LOOP
+                
+                      EXIT WHEN( ( MOD(i, j) = 0 )
+                
+                            OR ( j = i ) );
+                
+                      j := j + 1;
+                
+                    END LOOP;
+                
+                    IF( j = i )THEN
+                
+                     dbms_output.Put(i||'  ');  
+                
+                    END IF;
+                
+                    i := i + 1;
+                
+                    exit WHEN i = 100;
+                
+                  END LOOP;
+                
+                dbms_output.new_line;
+                
+                END;
+                
+                /
+                
+                Question 2
 
-              
+                Write a PL/SQL program to display the description against a grade according to the marks achieved by students in their final exams.
+                
+                Your Answer
+
+
+                DECLARE
+                
+                  grd CHAR(1);
+                
+                 BEGIN
+                
+                  -- Accept value for grade
+                
+                  grd := '&new_grd';
+                
+                 CASE grd
+                
+                  WHEN 'A' THEN dbms_output.Put_line('Your Grade is: Outstanding');
+                
+                  WHEN 'B' THEN dbms_output.Put_line('Your Grade is: Excellent');
+                
+                  WHEN 'C' THEN dbms_output.Put_line('Your Grade is: Very Good');
+                
+                  WHEN 'D' THEN dbms_output. Put_line('Your Grade is: Average');
+                
+                  WHEN 'F' THEN dbms_output.Put_line('Your Grade is: Poor');
+                
+                  ELSE dbms_output.Put_line('No such grade in the list.');
+                
+                 END CASE;
+                
+                 END;
+                
+                /                
 
             </pre>
           </div>

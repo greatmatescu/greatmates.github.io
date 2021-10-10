@@ -64,6 +64,7 @@ nav .title h1{
     font-weight: 600;
     color: rgb(55, 34, 238);
     line-height: 2.5rem;
+    cursor: default; 
 }
 nav .title h1 sup{
     text-align: center;
@@ -173,6 +174,7 @@ main .title h1{
     letter-spacing: 0.5px;
     word-wrap: break-word;
     padding-bottom: 1rem;
+    cursor: default;
 }
 /*---- Title End -----*/
 
@@ -260,6 +262,7 @@ main .title h1{
     display: block;
     background: linear-gradient(to right,#1b9bff,#0082e6);
     border-radius: 0.5rem;
+    cursor: default;
 }
 .btns{
     width: 100%;
