@@ -182,6 +182,10 @@ main .title h1{
 .left-container .search{
     display: none;
 }
+pre{
+ white-space: pre-wrap;
+ word-break: break-all;
+}
 .content{
     width: 100%;
     height: auto;
