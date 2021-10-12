@@ -166,91 +166,91 @@
               />
             </div> -->
           </form>
-          <div class="title"><h1>DBMS Surprise Test 1   </h1></div>
+          <div class="title"><h1>DBMS POST 1.2</h1></div>
           <div class="content">
             <pre>
 
-Que. A attribute in a relation is a foreign key if which of the following key from one relation is used as an attribute in
-that relation .
+Question 1Find the error in the following SQL statement?
+SELECT *;
+ 
+No Error
 
-Candidate Key
 
-Super Key
+No table mentioned
 
-Sub Key
 
-Primary Key
-Answer : D.Primary Key <hr>
-Que. Consider attributes ID , CITY and NAME . Which one of this can be considered as a super key ?
+Depends
 
-ID
 
-CITY
+None of the mentioned
+Answer : No table mentioned <hr>
+Question 2
+Which of the following clauses is evaluated in the last by the database server?
+ 
+SELECT
 
-NAME
 
-CITY,ID
-Answer :A. ID<hr>
-Que. Which of the following is not involved in DBMS?
+WHERE
 
-End Users
 
-Data
+FROM
 
-Application Request
 
-HTML
-Answer :D. HTML<hr>
-Que. Database is called as a collection of what?
-Hide answer choices 
-Module
+None of the mentioned
+Answer :SELECT<hr>
+Question 3
+Which clause is mandatory with clause “SELECT” in Mysql?
+ 
+ 
+FROM
 
-Data
 
-Programs
+WHERE
 
-Instructions
-Answer : B.Data<hr>
-Que. Mapping of concepts and their relationships is represented by what?
 
-Logical Schema
+Both FROM and WHERE
 
-Physical Schema
 
-Conceptual Schema
 
-None of these
-Answer : C.Conceptual Schema<hr>
-Que. The key selected from the sets of candidate keys by database designer is called
 
-Primary key
+None of the mentioned
+Answer :FROM<hr>
+Question 4
+Which data type can store unstructured data in a column?
+ 
+RAW
 
-Secondary Key
 
-Foreign key
+VARCHAR
 
-Super key
-Answer : A. Primary Key<hr>
-Que. To remove a relation from an SQL database, we use which command from the following?
 
-DELETE
+NUMERIC
 
-DROP TABLE
 
-REMOVE
+CHAR
+Answer :RAW<hr>
+Question 5
+Consider the following set of relations
+ 
+EMP ( emp_no,emp_name,dept_no,salary)
+DEPT (dept_no,dept_name,location)
+Write SQL query for the following
+Find all the employees whose departments are located in 'Mumbai' and salary is greater than Rs. 30,000.
+ 
+select emp_name from dept where dept_no and location='Mumbai';
 
-PURGE
-Answer : B. Drop Table<hr>
-Que. The degree of the relationship is
 
-number of Tables in a relationship
+select emp_name from emp where salary>30,000 and dept_no in (select dept_no from dept where location ='Mumbai');
 
-number of entities in a relationship
 
-number of Row & Columns in a relationship
+select dept_no ,count(emp_no) from emp where salary > 30,000 group by dept_no;
 
-number of participating entities in a relationship
-Answer : D. number of participating entities in a relationship<hr>
+
+select dept_no ,count(emp_no) from emp where salary > 30,000 group by dept_no;
+Answer :select emp_name from emp where salary > 30,000 and dept_no in (select dept_no from dept where location 
+= 'Mumbai');
+<hr>
+
 
 
             </pre>
