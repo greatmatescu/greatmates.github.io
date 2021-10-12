@@ -10,7 +10,7 @@
     <meta name="title" content="title=Greatmates.GM" />
     <link rel="stylesheet" href="../../../style.css" />
     <script src="../../../script.js"></script>
-    <title>Assignment 1</title>
+    <title>Post Lab 1.2</title>
   </head>
   <body>
     <div class="container">
@@ -166,48 +166,92 @@
               />
             </div> -->
           </form>
-          <div class="title"><h1>Assignment 1 </h1></div>
+          <div class="title"><h1>DBMS POST 1.2</h1></div>
           <div class="content">
             <pre>
-                Question. Differentiate between DBMS and RDBMS with example?
-                Database Management System (DBMS) is software that is used to define, create and maintain a database
-                and provides controlled access to the data. 
-                Relational Database Management System (RDBMS) is an advanced version of a DBMS. 
 
-                DBMS
-                1) DBMS applications store data as files.
-                2) In DBMS, data is generally stored in either a hierarchical form or a navigational form.
-                3) Normalization is not present in DBMS.
-                4) DBMS does not apply any security with regards to data manipulation.
-                5) DBMS uses a file system to store data, so there will be no relation between the tables.
-                6) Examples of DBMS are file systems, XML, etc.
-
-                RDBMS
-                1. RDBMS applications store data in a tabular form.
-                2. in RDBMS, data values are stored in the form of tables, so a relationship between these data values will be
-                stored in the 
-                3. form of a table as well.
-                4. Normalization is present in RDBMS.
-                5. RDBMS defines the integrity constraint for the purpose of ACID (Atomicity, Consistency, Isolation, 
-                and Durability) property.
-                6. In RDBMS, the tables have an identifier called primary key and the data values are stored in the form of 
-                tables.
-                7. Examples of RDBMS are MySQL, Postgres, SQL Server, Oracle, etc. <hr>
-                Question. Translate the following: i) Key constraints ii) Integrity constraints. 
-
-                i) Key constraints
+Question 1Find the error in the following SQL statement?
+SELECT *;
  
-                1. These are called uniqueness constraints since it ensures that every tuple in the relation should be unique.
-                2. A relation can have multiple keys or candidate keys(minimal superkey), out of which we choose one of the 
-                keys as primary key, we don’t have any restriction on choosing the primary key out of candidate keys, but it is
-                suggested to go with the candidate key with less number of attributes.
-                3. Null values are not allowed in the primary key, hence Not Null constraint is also a part of key constraint.
-                ii) Integrity constraints. 
+No Error
+
+
+No table mentioned
+
+
+Depends
+
+
+None of the mentioned
+Answer : No table mentioned <hr>
+Question 2
+Which of the following clauses is evaluated in the last by the database server?
  
-                1. Integrity constraints are a set of rules. It is used to maintain the quality of information.
-                2. Integrity constraints ensure that the data insertion, updating, and other processes have to be performed in
-                such a way that data integrity is not affected.
-                3. Thus, integrity constraint is used to guard against accidental damage to the database.
+SELECT
+
+
+WHERE
+
+
+FROM
+
+
+None of the mentioned
+Answer :SELECT<hr>
+Question 3
+Which clause is mandatory with clause “SELECT” in Mysql?
+ 
+ 
+FROM
+
+
+WHERE
+
+
+Both FROM and WHERE
+
+
+
+
+None of the mentioned
+Answer :FROM<hr>
+Question 4
+Which data type can store unstructured data in a column?
+ 
+RAW
+
+
+VARCHAR
+
+
+NUMERIC
+
+
+CHAR
+Answer :RAW<hr>
+Question 5
+Consider the following set of relations
+ 
+EMP ( emp_no,emp_name,dept_no,salary)
+DEPT (dept_no,dept_name,location)
+Write SQL query for the following
+Find all the employees whose departments are located in 'Mumbai' and salary is greater than Rs. 30,000.
+ 
+select emp_name from dept where dept_no and location='Mumbai';
+
+
+select emp_name from emp where salary>30,000 and dept_no in (select dept_no from dept where location ='Mumbai');
+
+
+select dept_no ,count(emp_no) from emp where salary > 30,000 group by dept_no;
+
+
+select dept_no ,count(emp_no) from emp where salary > 30,000 group by dept_no;
+Answer :select emp_name from emp where salary > 30,000 and dept_no in (select dept_no from dept where location 
+= 'Mumbai');
+<hr>
+
+
 
             </pre>
           </div>

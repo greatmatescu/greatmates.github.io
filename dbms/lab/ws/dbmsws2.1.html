@@ -10,7 +10,7 @@
     <meta name="title" content="title=Greatmates.GM" />
     <link rel="stylesheet" href="../../../style.css" />
     <script src="../../../script.js"></script>
-    <title>Worksheet 1.2</title>
+    <title>Worksheet 2.1</title>
   </head>
   <body>
     <div class="container">
@@ -166,28 +166,54 @@
               />
             </div> -->
           </form>
-          <div class="title"><h1>DBMS WORKSHEET 1.2</h1></div>
+          <div class="title"><h1>DBMS WORKSHEET 2.1</h1></div>
           <div class="content">
             <pre>
-              1.2 Create department table with the following structure.
-              Name Type
-              Deptno Number
-              Deptname Varchar2(10)
-              location Varchar2(10)
-              a. Add column designation to the department table.
-              b. Insert values into the table.
-              c. List the records of dept table grouped by deptno.
-             
-              Answer:-
-              create table department(deptno number(30),deptname varchar2(40),location varchar2(40));
-              alter table department add designation varchar(40);
-              insert into department values( '2','sales','delhi','manager');
-              insert into department values('3','production','mumbai','employee');
-              insert into department values('4','advertisement','chennai','ceo');
-              insert into department values('5','manufacturing','kolkata','employee');
-              Select * from department order by deptno;
-               
-                
+Question 1
+
+Write a PL/SQL program to display the description against a grade according to the marks achieved by 
+students in their final exams.
+
+Code:
+----to display grade according to marks
+DECLARE
+marks number(10);
+BEGIN
+marks:=79;
+if(marks>=90)then
+dbms_output.put_line('grade is A+');
+elsif(marks>=80 and marks<=80)then
+dbms_output.put_line('grade is A');
+elsif(marks>=70 and marks<=80)then
+dbms_output.put_line('grade is B+');
+elsif(marks>=60 and marks<=70)then
+dbms_output.put_line('grade is B');
+elsif(marks>=50and marks<=60)then
+dbms_output.put_line('grade is C+');
+else
+dbms_output.put_line('F fail');
+end if;
+END; <hr>
+
+Ques : 2
+
+Write a PL/SQL program to check whether a given number is positive, negative
+or zero.
+code :
+
+declare
+n number := 16;
+begin
+if n <0 then
+dbms_output.Put_line('Negative');
+elsif n >0 then
+dbms_output.Put_line('Positive');
+else
+dbms_output.Put_line('Zero');
+end if;
+end;
+
+                           
 
             </pre>
           </div>
